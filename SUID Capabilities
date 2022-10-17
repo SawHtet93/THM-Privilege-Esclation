@@ -26,4 +26,6 @@ void main()
 
 NFS
 cat /etc/exports
+showmount -e  x.x.x.x
+mount -o rw x.x.x.x:/sharefolder /moutfolder
 
