@@ -132,6 +132,25 @@ https://packetstormsecurity.com/files/160404/Druva-inSync-Windows-Client-6.6.3-P
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+Tools of the Trade
+WinPEAS
+winpeas.exe > outputfile.txt
+https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS
+
+PrivescCheck
+https://github.com/itm4n/PrivescCheck
+PS C:\> Set-ExecutionPolicy Bypass -Scope process -Force
+
+WES-NG: Windows Exploit Suggester - Next Generation
+user@kali$ wes.py systeminfo.txt
+
+Metasploit
+multi/recon/local_exploit_suggester
+If you already have a Meterpreter shell on the target system, you can use the multi/recon/local_exploit_suggester module to list vulnerabilities 
+that may affect the target system and allow you to elevate your privileges on the target system.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 
 
 
